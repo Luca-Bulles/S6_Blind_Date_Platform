@@ -1,44 +1,30 @@
 name: .NET
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: ["**"]
-    paths: ["backend/**"]
+    branches:
+      - "**"
   pull_request:
-    branches: ["main"]
-    paths: ["backend/**"]
+    branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: windows-latest
 
+    runs-on: ubuntu-latest
+    
     defaults:
       run:
         working-directory: "./backend"
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2.1.0
-        id: checkout_code
-            
-      - name: setup-msbuild
-        uses: microsoft/setup-msbuild@v1.1
-        id: setup_msbuild
-              
-      - name: Run MSBuild
-        id: run_msbuild
-        run: |
-          msbuild .\backend.sln  /t:clean /p:Configuration=Debug
-          nuget restore .\backend.sln
-          msbuild .\backend.sln  /t:build /p:Configuration=Debug
-        
-      - name: Setup VSTest and add to PATH
-        uses: darenm/Setup-VSTest@v1
-        id: setup_vstest
-        
-      - name: Test
-        id: run_vstest
-        working-directory: backend\backend.Test\bin\Debug
-        run: vstest.console.exe .\backend.Tests.dll
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
