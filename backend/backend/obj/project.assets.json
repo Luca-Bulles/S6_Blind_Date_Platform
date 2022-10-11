@@ -215,11 +215,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luca_\\source\\repos\\Semester-6\\backend\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\backend\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\luca_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\backend\\backend\\obj\\",
+      "outputPath": "C:\\Users\\luca_\\source\\repos\\Semester-6\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
