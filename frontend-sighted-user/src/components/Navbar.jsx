@@ -39,12 +39,13 @@ const Navbar = () => {
             <Logo />
           </Link>
         </div>
+        {/* Desktop navbar links */}
         <ul className='hidden lg:flex md:flex w-auto  space-x-16 items-center justify-between '>
           {Navlinks.map((link, _) => (
-            <Link key={_} to={link.link} className={currentPage.pathname === link.link ? 'text-cyan-500' : 'navlink'}>{link.icon} {link.name}</Link>
+            <Link key={_} to={link.link} className={`${currentPage.pathname === link.link ? 'text-cyan-500' : ''} navlink`}>{link.icon} {link.name}</Link>
           ))}
         </ul>
-        {/* Mobile navbar */}
+        {/* Mobile navbar links*/}
         <Menu as="div" className="relative lg:hidden md:hidden">
           <div>
             <Menu.Button className="inline-flex w-full justify-center rounded-md ">
@@ -70,7 +71,6 @@ const Navbar = () => {
             </Menu.Items>
           </Transition>
         </Menu>
-
       </nav>
       <hr className='border-t-1 border-gray-500 w-11/12 pb-3' />
     </>
@@ -78,6 +78,9 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
 
 
 
