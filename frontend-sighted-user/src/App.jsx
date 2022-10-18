@@ -1,15 +1,11 @@
-import Navbar from './components/Navbar'
+import Navbar from './components/common/Navbar'
 import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import Home from './pages/Home';
-import Chat from './pages/Chat';
-import QandA from './pages/QandA';
-import Blog from './pages/Blog';
-
+import { Home, Chat, QandA, Blog, QuestionDetailPage } from './pages';
 
 function App() {
   return (
@@ -17,10 +13,15 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/question" element={<QandA />} />
-          <Route path="/blog" element={<Blog />} />
+          {/* Home */}
+          <Route exact path="/" element={<Home />} />
+          {/* Detail */}
+          <Route exact path="/chat" element={<Chat />} />
+          {/* Questions */}
+          <Route exact path="/question" element={<QandA />} />
+          <Route path="/question/:id" element={<QuestionDetailPage />} />
+          {/* Blog */}
+          <Route exact path="/blog" element={<Blog />} />
         </Routes>
       </Router>
     </div>
