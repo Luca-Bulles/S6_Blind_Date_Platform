@@ -10,7 +10,7 @@ namespace backendquestions.Controllers
     [ApiController]
     public class QuestionController : ControllerBase
     {
-        private readonly QuestionService _questionService;
+        private readonly IQuestionService _questionService;
 
         public QuestionController(QuestionService questionService)
         {

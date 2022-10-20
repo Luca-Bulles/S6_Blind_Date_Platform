@@ -3,7 +3,7 @@ using backendquestions.Models;
 
 namespace backendquestions.Services
 {
-    public class QuestionService
+    public class QuestionService : IQuestionService
     {
         private readonly IQuestionRepository _questionRepository;
 
