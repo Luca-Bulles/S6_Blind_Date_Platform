@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {}
+    "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {}
   },
   "projects": {
-    "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {
+    "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+        "projectUniqueName": "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+        "projectPath": "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\goert\\.nuget\\packages\\",
-        "outputPath": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
+        "outputPath": "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\goert\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
