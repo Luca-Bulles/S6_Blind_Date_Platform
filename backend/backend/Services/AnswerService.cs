@@ -7,33 +7,33 @@ namespace backend.Services
     {
         private readonly IAnswerRepository _answerRepository;
 
-        public QuestionService(IAnswerRepository answerrepository)
+        public AnswerService(IAnswerRepository answerrepository)
         {
-            _questionRepository = answerrepository;
+            _answerRepository = answerrepository;
         }
-        public Task<List<Answer>> AddAnswer(Answer answer)
+        public async Task<List<Answer>> AddAnswer(Answer answer)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<Answer>> DeleteAnswer(Guid id)
-        {
-            throw new NotImplementedException();
+            return await _answerRepository.AddAnswer(answer);
         }
 
-        public Task<List<Answer>> GetAllAnswers()
+        public async Task<List<Answer>> DeleteAnswer(Guid id)
         {
-            throw new NotImplementedException();
+            return await _answerRepository.DeleteAnswer(id);
         }
 
-        public Task<Answer> GetAnswerById(Guid id)
+        public async Task<List<Answer>> GetAllAnswers()
         {
-            throw new NotImplementedException();
+            return await _answerRepository.GetAllAnswers();
         }
 
-        public Task<List<Answer>> UpdateAnswer(Answer answer)
+        public async Task<Answer> GetAnswerById(Guid id)
         {
-            throw new NotImplementedException();
+            return await _answerRepository.GetAnswerbyId(id);
+        }
+
+        public async Task<List<Answer>> UpdateAnswer(Answer answer)
+        {
+            return await _answerRepository.UpdateAnswer(answer);
         }
     }
 }
