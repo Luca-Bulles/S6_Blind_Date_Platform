@@ -1,5 +1,6 @@
 ﻿using backendquestions.Interfaces;
 using backendquestions.Models;
+using backendquestions.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,23 +10,23 @@ namespace backendquestions.Controllers
     [ApiController]
     public class QuestionController : ControllerBase
     {
-        private readonly IQuestionRepository _questionRepository;
+        private readonly IQuestionService _questionService;
 
-        public QuestionController(IQuestionRepository questionRepository)
+        public QuestionController(QuestionService questionService)
         {
-            _questionRepository = questionRepository;
+            _questionService = questionService;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Question>>> GetAllQuestions()
         {
-            return Ok(await _questionRepository.GetAllQuestions());
+            return Ok(await _questionService.GetAllQuestions());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Question>> GetQuestionById(Guid id)
         {
-            var response = await _questionRepository.GetQuestionById(id);
+            var response = await _questionService.GetQuestionById(id);
             if (response != null)
             {
                 return Ok(response);
@@ -36,13 +37,13 @@ namespace backendquestions.Controllers
         [HttpPost]
         public async Task<ActionResult<List<Question>>> PostQuestion(Question Question)
         {
-            return Ok(await _questionRepository.AddQuestion(Question));
+            return Ok(await _questionService.AddQuestion(Question));
         }
 
         [HttpPut]
         public async Task<ActionResult<List<Question>>> UpdateQuestion(Question request)
         {
-            var response = await _questionRepository.UpdateQuestion(request);
+            var response = await _questionService.UpdateQuestion(request);
             if (response != null)
             {
                 return Ok(response);
@@ -53,7 +54,7 @@ namespace backendquestions.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<List<Question>>> DeleteQuestion(Guid id)
         {
-            var Response = await _questionRepository.DeleteQuestion(id);
+            var Response = await _questionService.DeleteQuestion(id);
             if (Response != null)
             {
                 return Ok(Response);
