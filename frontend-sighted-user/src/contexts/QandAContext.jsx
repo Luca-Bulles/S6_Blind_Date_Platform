@@ -31,7 +31,6 @@ const QandAContextProvider = (props) => {
   const GetQuestionDetail = async (questionId) => {
     const question = await QuestionService.GetQuestion(questionId);
     SetSelectedQuestion(question)
-    console.log(question.answers)
     return question;
   }
 
