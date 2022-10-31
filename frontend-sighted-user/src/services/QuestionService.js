@@ -189,8 +189,6 @@ const FakeQuestionList = [{
   "amountOfLikes": 18
 }]
 
-
-
  export  class QuestionService extends BaseHttpService {
 
   GetMyFeedQuestionList() {
