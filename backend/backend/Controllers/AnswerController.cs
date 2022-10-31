@@ -11,7 +11,7 @@ namespace backend.Controllers
     public class AnswerController : ControllerBase
     {
         private readonly IAnswerService _context;
-        public AnswerController(AnswerService context)
+        public AnswerController(IAnswerService context)
         {
             _context = context;
         }

@@ -2194,11 +2194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+      "projectUniqueName": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
+      "projectPath": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\goert\\.nuget\\packages\\",
-      "outputPath": "D:\\Gebruiker\\Mark Goertz\\School\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
+      "outputPath": "D:\\S6-Fontys\\S6_Blind_Date_Platform\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\goert\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2265,7 +2265,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
