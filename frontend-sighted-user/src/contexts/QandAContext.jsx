@@ -40,6 +40,7 @@ const QandAContextProvider = (props) => {
   //Get Feed Question List
   const GetFeedQuestionList = async () => {
     const data = await QuestionService.GetMyFeedQuestionList();
+    console.log(data)
     SetMyFeedQuestions(data);
   }
 
