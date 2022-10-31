@@ -1,6 +1,20 @@
 import BaseHttpService from './BaseHttpService';
 
-export default class AnswerServices extends BaseHttpService {
 
+const FakeData = [
+  
+];
 
+class AnswerServices extends BaseHttpService {
+
+  async FindAnswersByQuestionId(questionId){
+    //TODO: Fetch Data from backend
+    return FakeData;
+  }
 }
+
+
+
+
+
+export default new AnswerServices('AnswerService')

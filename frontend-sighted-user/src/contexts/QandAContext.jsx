@@ -14,6 +14,9 @@ export const Tabs = [
 const QandAContextProvider = (props) => {
   const [selectedTab, SetSelectedTab] = useState(Tabs[0]);
   const [myFeedQuestions, SetMyFeedQuestions] = useState([]);
+  const [selectedQuestion, SetSelectedQuestion] = useState({});
+
+
   //Switch Content Filter
   const SwitchTabsTo = (tabName) => {
     switch (tabName) {
@@ -24,8 +27,32 @@ const QandAContextProvider = (props) => {
     }
   }
 
+  //Get question detail 
+  const GetQuestionDetail = async (questionId) => {
+    const question = await QuestionService.GetQuestion(questionId);
+    SetSelectedQuestion(question)
+    console.log(question.answers)
+    return question;
+  }
 
-  return <QandAContext.Provider value={{ myFeedQuestions, selectedTab, SwitchTabsTo }}>
+
+
+
+  //Get Feed Question List
+  const GetFeedQuestionList = async () => {
+    const data = await QuestionService.GetMyFeedQuestionList();
+    SetMyFeedQuestions(data);
+  }
+
+
+
+  useEffect(() => {
+    GetFeedQuestionList();
+  }, [])
+
+
+
+  return <QandAContext.Provider value={{ myFeedQuestions, selectedTab, selectedQuestion, SwitchTabsTo, GetQuestionDetail }}>
     {props.children}
   </QandAContext.Provider>
 }
